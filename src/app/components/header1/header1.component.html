@@ -14,16 +14,15 @@
           <a class="nav-link" href="#" (click)="onclick('shoppinglist')">Shopping List</a>
         </li>
       </ul>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+      <ul class=" nav navbar-nav ms-auto navbar-right " >
+        <li class="nav-item dropdown" appDropdown>
+          <a class="nav-link dropdown-toggle" appDropdown href="#" id="navbarDropdown" role="button">
             Manage
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Save Data</a>
-            <a class="dropdown-item" href="#">Fetch Data</a>
-          </div>
+          <ul class="dropdown-menu" >
+            <li><a href="#">Save Data</a></li>
+            <li><a  href="#">Fetch Data</a></li>
+          </ul>
         </li>
       </ul>
     </div>
