@@ -8,21 +8,22 @@
     <h3>{{ recipe.name }}</h3>
   </div>
   <div class="col-lg-4">
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        Manage recipe <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">To shopping list</a></li>
-        <li><a href="#">Edit recipe</a></li>
-        <li><a href="#">Delete recipe</a></li>
-      </ul>
-    </div>
+
+    <h3>Manage recipe <span class="caret"></span></h3>
+
+        <button class="btn btn-primary dbutton"><a (click)="onAddShoppingList()" style="cursor: pointer;" class="font-weight-bold text-decoration-none">To shopping list</a></button> <br>
+        <button class="btn btn-primary dbutton"><a href="#" class="font-weight-bold text-decoration-none">Edit recipe</a></button> <br>
+        <button class="btn btn-primary dbutton"><a href="#" class="font-weight-bold text-decoration-none">Delete recipe</a></button>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <h5>{{recipe.description}}</h5>
-      <h5></h5>
+      <!-- <h5>{{recipe.description}}</h5>
+      <h5></h5> -->
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let ingredient of recipe.ingredientsRef">
+          {{ ingredient.name }} => ({{ ingredient.amount }})
+        </li>
+      </ul>
     </div>
   </div>
 </div>

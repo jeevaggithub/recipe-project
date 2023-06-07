@@ -1,10 +1,11 @@
-import{ EventEmitter, Output } from '@angular/core';
+
 
 import { Ingredients, } from "src/app/shared/ingredients.model";
 
 
 
 export class ShoppingListService{
+
 
   ingredients :Ingredients[]=[
     new Ingredients('Apple',5),
@@ -15,7 +16,14 @@ export class ShoppingListService{
   addIngredients(value:Ingredients){
 
     this.ingredients.push(value);
-    console.log(this.ingredients,'iugifa');
+    // console.log(this.ingredients,'iugifa');
+
+  }
+
+  addIngedient(ingredient:Ingredients[]){
+    this.ingredients.push(...ingredient);
+    // console.log(ingredient,'tvytuygufyu');
+    // console.log(this.ingredients,'this.ingredients');
 
   }
 
