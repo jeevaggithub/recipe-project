@@ -31,7 +31,7 @@ export class RecipeListComponent implements OnInit {
     // console.log('recipeModel',this.recipes);
     // console.log('recipeModel',this.recipes[0].name);
     this.recipes = this.recipeService.getRecipeList();
-    console.log('logging from recioe list',this.recipes);
+    // console.log('logging from recioe list',this.recipes);
 
   }
   onRecipeselected(recipeEl:recipe){
